@@ -1,27 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import { Texts } from './constants/texts'
+import './App.css';
+import Navbar from './components/Navbar';
+import { NFTHomeScreen, NFTSignIn, NFTSignUp } from './screens';
 
 const App = () => {
-  const [isEnglish, setIsEnglish] = useState(false)
-
-
 
   return (
     <div>
-      <p className='brandTitle'>{
-        isEnglish ?
-          Texts.brandTitleEnglish
-          :
-          Texts.brandTitleTurkish
-      }
-      </p>
-      <button onClick={() => setIsEnglish(!isEnglish)}>{
-        isEnglish ?
-          Texts.switchEnglish
-          :
-          Texts.switchTurkish
-      }</button>
+      <Navbar />
+      <NFTHomeScreen />
+      <NFTSignUp />
+      <NFTSignIn />
+
     </div>
   )
 }
