@@ -10,7 +10,6 @@ const App = () => {
       <NFTHomeScreen />
       <NFTSignUp />
       <NFTSignIn />
-
     </div>
   )
 }
